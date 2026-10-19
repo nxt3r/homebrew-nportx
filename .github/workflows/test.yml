@@ -1,0 +1,21 @@
+name: Test Formula
+
+on:
+  push:
+    paths:
+      - 'Formula/**'
+  workflow_dispatch:
+
+jobs:
+  test-brew:
+    runs-on: macos-latest
+    steps:
+      - name: Tap and Install
+        run: |
+          brew tap nxt3r/nportx
+          brew install nportx
+          
+      - name: Verify installation
+        run: |
+          nportx --version
+          nportx doctor --help
