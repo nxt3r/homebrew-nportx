@@ -1,16 +1,16 @@
 class Nportx < Formula
   desc "Find and kill processes hogging your ports. Instantly."
   homepage "https://github.com/nxt3r/nportx"
-  version "0.2.0"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/nxt3r/nportx/releases/download/v#{version}/nportx-aarch64-apple-darwin.tar.gz"
-      sha256 "7A2D23F14832490408F9548660B8771F0E6C9A3647C631EBBB19A4C773A51470"
+      sha256 "51bd529477935e649844aacebd06be816cbef42cd6238fd633de22717aa94df8"
     else
       url "https://github.com/nxt3r/nportx/releases/download/v#{version}/nportx-x86_64-apple-darwin.tar.gz"
-      sha256 "DBF898B01853AE874356C75C2FD4279DAF207AF1C69207F52D89EE1DD8001D23"
+      sha256 "2d5d98ebba0f95880cb99ec64b7a538073fd5011b40edc32b1eb7f4a581368bd"
     end
   end
 
